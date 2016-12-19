@@ -58,3 +58,30 @@ function removeChar(str){
 var result = str.slice(1, -1);
 return result;
 };
+
+
+/********************************************
+            CODE WARS TEST 3
+********************************************/
+
+Create a "function" that takes an integer as an argument and returns "Even" for even
+numbers or "Odd" for odd numbers.
+
+SOLUTION : 
+
+function even_or_odd(number) {
+  // ...    
+    if(number % 2 === 0) {
+    // % is the modulo operator.
+    // === means 'is equal to'
+    // The 0 means that when var number is divided by 2, there are 0 remainders.
+      return "Even";
+      } else {
+        return "Odd";
+        }
+}
+
+
+/********************************************
+            CODE WARS TEST 4
+********************************************/
