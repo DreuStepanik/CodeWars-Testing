@@ -85,3 +85,32 @@ function even_or_odd(number) {
 /********************************************
             CODE WARS TEST 4
 ********************************************/
+Write a "function" persistence, that takes in a positive parameter num and returns its multiplicative
+persistence, which is the number of times you must multiply the digits in num until you reach a single
+digit.
+
+SOLUTION :
+
+function persistence(num) { 
+  function multiply(n){
+    // The reduce() method reduces the array to a single value.
+    // The reduce() method executes a provided function for each value of the array (from left-to-right).
+           return n.reduce(function(a,b){return a*b;});
+       }
+       // Set the default level to 0 for the count.
+       var count =0; 
+       // The toString() method converts a number to a string.
+       // set a rule, to make sure that the number being reduced is always greater that index value of 1. 
+       // Meaning.. the function will continue as long as there is at least 2 places of the number. 
+       while(num.toString().length > 1) {
+           num= num.toString().split("");
+           num = multiply(num);
+           count++;
+        }
+        return count; 
+}
+
+/********************************************
+            CODE WARS TEST 5
+********************************************/
+
